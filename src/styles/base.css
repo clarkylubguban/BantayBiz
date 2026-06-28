@@ -1,0 +1,276 @@
+:root {
+  --green: #16b56f;
+  --green-deep: #137a52;
+  --navy: #07184a;
+  --purple: #7b4dff;
+  --pink: #f84b7d;
+  --orange: #ff8a1f;
+  --blue: #1e88ff;
+  --cream: #fff9ef;
+  --mint: #eaf8f0;
+  --soft-purple: #f2eafe;
+  --soft-pink: #ffe8f0;
+  --soft-orange: #fff1df;
+  --soft-blue: #eaf4ff;
+  --border: #e7eaf3;
+  --muted: #7a83a3;
+  --card-radius: 20px;
+  --control-radius: 16px;
+  --card-shadow: 0 10px 30px rgba(7, 24, 74, 0.07);
+  --lifted-shadow: 0 14px 36px rgba(7, 24, 74, 0.08);
+  color: var(--navy);
+  background: #eef3f8;
+  font-family:
+    "Hanken Grotesk", Inter, ui-sans-serif, system-ui, -apple-system,
+    BlinkMacSystemFont, "Segoe UI", sans-serif;
+  font-synthesis: none;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+html,
+body {
+  height: 100%;
+}
+
+body {
+  min-width: 320px;
+  min-height: 100vh;
+  margin: 0;
+  background: var(--cream);
+  font-size: 16px;
+}
+
+button,
+input {
+  font: inherit;
+}
+
+button {
+  cursor: pointer;
+}
+
+button:active {
+  transform: translateY(1px);
+}
+
+.app-shell {
+  display: flex;
+  justify-content: center;
+  min-height: 100dvh;
+  background: var(--cream);
+}
+
+.app-container {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  max-width: 430px;
+  height: 100dvh;
+  min-height: 0;
+  margin: 0 auto;
+  overflow: hidden;
+  background: var(--cream);
+}
+
+.phone-frame {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  height: 100dvh;
+  min-height: 0;
+  overflow: hidden;
+  background: var(--cream);
+}
+
+.status-bar {
+  display: flex;
+  flex: 0 0 auto;
+  justify-content: space-between;
+  padding: 12px 22px 4px;
+  color: var(--navy);
+  font-size: 0.82rem;
+  font-weight: 900;
+}
+
+.app-header,
+.brand-header,
+.section-heading {
+  display: flex;
+  align-items: center;
+}
+
+.app-header {
+  position: relative;
+  z-index: 5;
+  flex: 0 0 auto;
+  gap: 10px;
+  padding: max(14px, env(safe-area-inset-top)) 18px 12px;
+  background: var(--cream);
+}
+
+.header-copy {
+  flex: 1;
+  min-width: 0;
+}
+
+.header-copy strong,
+.header-copy span {
+  display: block;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.header-copy strong {
+  color: var(--navy);
+  font-size: 1rem;
+  font-weight: 900;
+}
+
+.header-copy span {
+  font-size: 0.8rem;
+  font-weight: 800;
+}
+
+.header-copy span,
+.metric-card span,
+.form-input span,
+.action-card small,
+.section-heading span,
+.preview-copy {
+  color: var(--muted);
+}
+
+.header-icon,
+.avatar,
+.brand-badge,
+.icon-badge {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  flex: 0 0 auto;
+}
+
+.header-icon {
+  width: 40px;
+  height: 40px;
+  border: 1px solid var(--border);
+  border-radius: 14px;
+  color: #f9c64f;
+  background: #ffffff;
+  box-shadow: 0 7px 20px rgba(7, 24, 74, 0.06);
+}
+
+.avatar {
+  width: 42px;
+  height: 42px;
+  border-radius: 14px;
+  color: #ffffff;
+  font-weight: 900;
+}
+
+.avatar.green,
+.primary-button.green {
+  background: var(--green);
+}
+
+.avatar.purple,
+.primary-button.purple {
+  background: var(--purple);
+}
+
+.avatar.pink,
+.primary-button.pink {
+  background: var(--pink);
+}
+
+.screen-container {
+  display: grid;
+  flex: 1;
+  gap: 14px;
+  min-height: 0;
+  overflow: auto;
+  padding: 12px 18px 22px;
+  overscroll-behavior: contain;
+  scroll-padding-bottom: 22px;
+  -webkit-overflow-scrolling: touch;
+}
+
+.brand-header {
+  gap: 10px;
+}
+
+.brand-badge {
+  width: 44px;
+  height: 44px;
+  border-radius: 16px;
+  color: #ffffff;
+  background: var(--green-deep);
+}
+
+.brand-header strong,
+.brand-header span {
+  display: block;
+}
+
+.brand-header strong {
+  color: var(--navy);
+  font-size: 1.32rem;
+  font-weight: 900;
+}
+
+.brand-header span {
+  color: var(--green-deep);
+  font-size: 0.8rem;
+  font-weight: 800;
+}
+
+h1,
+h2,
+p {
+  margin: 0;
+}
+
+h1,
+h2 {
+  color: var(--navy);
+  font-weight: 900;
+}
+
+h1 {
+  margin-top: 4px;
+  font-size: clamp(1.9rem, 8.6vw, 2.25rem);
+  line-height: 1.08;
+}
+
+h2 {
+  font-size: 1.5rem;
+  line-height: 1.12;
+}
+
+.eyebrow {
+  margin: 0;
+  color: var(--green-deep);
+  font-size: 0.75rem;
+  font-weight: 900;
+  text-transform: uppercase;
+}
+
+.preview-section {
+  display: grid;
+  gap: 12px;
+}
+
+.hero-panel,
+.dashboard-section,
+.mode-list,
+.trust-strip {
+  display: grid;
+  gap: 10px;
+}
