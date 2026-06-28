@@ -1,0 +1,12 @@
+node_modules/
+dist/
+dist-check/
+verify-build/
+salary-verify/
+salary-recheck/
+staff-verify/
+owner-verify/
+*.log
+.env
+.env.*
+.DS_Store
