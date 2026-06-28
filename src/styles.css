@@ -1,0 +1,5 @@
+@import "./styles/base.css";
+@import "./styles/mode.css";
+@import "./styles/salary.css";
+@import "./styles/staff-owner.css";
+@import "./styles/dashboard-sheets.css";
