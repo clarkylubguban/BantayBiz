@@ -1,0 +1,318 @@
+.salary-topbar {
+  position: relative;
+  z-index: 5;
+  display: flex;
+  flex: 0 0 auto;
+  align-items: center;
+  gap: 10px;
+  padding: max(14px, env(safe-area-inset-top)) 26px 10px;
+  background: var(--cream);
+}
+
+.salary-back {
+  display: grid;
+  flex: 0 0 auto;
+  place-items: center;
+  width: 38px;
+  height: 38px;
+  border: 0;
+  border-radius: 999px;
+  color: var(--navy);
+  background: #ffffff;
+  box-shadow: var(--card-shadow);
+}
+
+.salary-title-wrap {
+  flex: 1;
+  min-width: 0;
+}
+
+.salary-title-wrap > span {
+  display: block;
+  color: var(--muted);
+  font-size: 0.82rem;
+  font-weight: 800;
+  line-height: 1.05;
+}
+
+.salary-name-row {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  min-width: 0;
+}
+
+.salary-name-row strong {
+  color: var(--navy);
+  font-size: 1.2rem;
+  font-weight: 950;
+  line-height: 1.05;
+}
+
+.salary-screen {
+  gap: 14px;
+  padding: 10px 26px 18px;
+}
+
+.salary-summary-card {
+  display: grid;
+  gap: 12px;
+  padding: 18px;
+  border-radius: 22px;
+  color: #ffffff;
+  background:
+    radial-gradient(circle at 18% 16%, rgba(255, 255, 255, 0.18), transparent 32%),
+    linear-gradient(135deg, #9a4dff 0%, #5b1fc2 100%);
+  box-shadow: 0 18px 36px rgba(123, 77, 255, 0.22);
+}
+
+.salary-summary-card p {
+  display: inline-flex;
+  align-items: center;
+  gap: 7px;
+  margin: 0;
+  color: rgba(255, 255, 255, 0.88);
+  font-size: 0.86rem;
+  font-weight: 900;
+}
+
+.salary-summary-amount {
+  color: #ffffff;
+  font-size: clamp(2.05rem, 10vw, 2.45rem);
+  font-weight: 950;
+  letter-spacing: 0;
+  line-height: 1;
+}
+
+.salary-inner-stats {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 12px;
+  margin-top: 4px;
+}
+
+.salary-inner-stat {
+  display: grid;
+  gap: 4px;
+  min-width: 0;
+  padding: 12px;
+  border-radius: 15px;
+  background: rgba(255, 255, 255, 0.14);
+}
+
+.salary-inner-stat span {
+  color: rgba(255, 255, 255, 0.76);
+  font-size: 0.74rem;
+  font-weight: 900;
+  line-height: 1.2;
+}
+
+.salary-inner-stat strong {
+  color: #ffffff;
+  font-size: 1rem;
+  font-weight: 950;
+  line-height: 1.05;
+}
+
+.salary-actions-grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 12px;
+}
+
+.salary-action-card {
+  display: grid;
+  align-content: start;
+  gap: 9px;
+  min-height: 112px;
+  padding: 14px;
+  border: 1px solid var(--border);
+  border-radius: 18px;
+  color: var(--navy);
+  background: #ffffff;
+  box-shadow: var(--card-shadow);
+  text-align: left;
+}
+
+.salary-action-card .icon-badge {
+  width: 38px;
+  height: 38px;
+  border-radius: 13px;
+}
+
+.salary-action-card strong {
+  margin-top: 2px;
+  font-size: 1rem;
+  font-weight: 950;
+  line-height: 1.1;
+}
+
+.salary-action-card span {
+  color: var(--muted);
+  font-size: 0.84rem;
+  font-weight: 750;
+  line-height: 1.2;
+}
+
+.ipon-card {
+  display: grid;
+  grid-template-columns: auto minmax(0, 1fr) auto;
+  gap: 12px;
+  align-items: center;
+  padding: 14px;
+  border: 1px solid var(--border);
+  border-radius: 18px;
+  color: var(--navy);
+  background: #ffffff;
+  box-shadow: var(--card-shadow);
+  text-align: left;
+}
+
+.ipon-card > svg {
+  color: #b8bdca;
+}
+
+.ipon-card-main,
+.ipon-card-title {
+  display: grid;
+  min-width: 0;
+}
+
+.ipon-card-title strong {
+  color: var(--navy);
+  font-size: 0.98rem;
+  font-weight: 950;
+  line-height: 1.1;
+}
+
+.ipon-card-title span {
+  margin-top: 2px;
+  color: var(--purple);
+  font-size: 0.82rem;
+  font-weight: 850;
+}
+
+.ipon-progress {
+  position: relative;
+  height: 8px;
+  margin-top: 10px;
+  overflow: hidden;
+  border-radius: 999px;
+  background: var(--soft-purple);
+}
+
+.ipon-progress-fill {
+  position: absolute;
+  inset: 0 auto 0 0;
+  width: 76%;
+  border-radius: inherit;
+  background: var(--purple);
+}
+
+.ipon-progress-meta {
+  display: flex;
+  justify-content: space-between;
+  gap: 12px;
+  margin-top: 8px;
+  color: var(--muted);
+  font-size: 0.8rem;
+  font-weight: 850;
+}
+
+.ipon-progress-meta span:first-child {
+  color: var(--purple);
+}
+
+.salary-transaction-list {
+  display: grid;
+  gap: 2px;
+  padding: 8px 12px;
+  border: 1px solid var(--border);
+  border-radius: 18px;
+  background: #ffffff;
+}
+
+.salary-transaction-row {
+  display: grid;
+  grid-template-columns: auto minmax(0, 1fr) auto;
+  gap: 11px;
+  align-items: center;
+  padding: 12px 0;
+  border-bottom: 1px solid var(--border);
+}
+
+.salary-transaction-row:last-child {
+  border-bottom: 0;
+}
+
+.salary-transaction-row .icon-badge {
+  width: 36px;
+  height: 36px;
+  border-radius: 12px;
+}
+
+.salary-transaction-row strong,
+.salary-transaction-row span {
+  display: block;
+}
+
+.salary-transaction-row strong {
+  font-size: 0.95rem;
+  line-height: 1.1;
+}
+
+.salary-transaction-row span {
+  margin-top: 2px;
+  color: var(--muted);
+  font-size: 0.78rem;
+  font-weight: 750;
+}
+
+.salary-transaction-row b {
+  font-size: 0.9rem;
+  font-weight: 950;
+  white-space: nowrap;
+}
+
+.salary-transaction-row b.green {
+  color: var(--green-deep);
+}
+
+.salary-transaction-row b.blue {
+  color: var(--blue);
+}
+
+.salary-transaction-row b.orange {
+  color: var(--navy);
+}
+
+.salary-transaction-row b.purple {
+  color: var(--purple);
+}
+
+.salary-goal-sheet-card {
+  display: grid;
+  gap: 10px;
+  padding: 16px;
+  border: 1px solid var(--border);
+  border-radius: 18px;
+  background: #ffffff;
+}
+
+.salary-goal-sheet-card > div:first-child {
+  display: flex;
+  justify-content: space-between;
+  gap: 12px;
+}
+
+.salary-goal-sheet-card strong {
+  color: var(--navy);
+  font-size: 1rem;
+  font-weight: 950;
+}
+
+.salary-goal-sheet-card > div:first-child span {
+  color: var(--purple);
+  font-size: 0.84rem;
+  font-weight: 900;
+}
